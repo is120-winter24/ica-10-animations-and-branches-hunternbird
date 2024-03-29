@@ -1,1 +1,83 @@
 /* TEAMMATE ONE EDITS THESE STYLES FOR YOUR TASKS */
+
+.logo rect,
+.logo text {
+    transition: transform 0.3s ease;
+}
+
+.logo:hover rect,
+.logo:hover text {
+    transform: rotate(360deg) scale(1.5);
+}
+
+
+.box-4 {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.box-5 {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.box-6 {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+@keyframes ChangeSquare {
+    0% {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    25% {
+        grid-column: 2;
+        grid-row: 1;
+        background-color: green;
+    }
+
+    50% {
+        grid-column: 3;
+        grid-row: 1;
+        background-color: blue;
+    }
+
+    75% {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    100% {
+        grid-column: 2;
+        grid-row: 2;
+    }
+}
+
+.box-4 {
+    animation: ChangeSquare 4s infinite ease;
+}
+
+.box-5 {
+    background-image: linear-gradient(to bottom right, #ff0000, #00ff00);
+    /* Initial gradient */
+    background-size: 100% 100%;
+    border: 1px solid black;
+}
+
+.box-5:hover {
+    animation: changeGradient 3s linear infinite;
+}
+
+@keyframes changeGradient {
+    0% {
+        filter: hue-rotate(0deg);
+        
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+       
+    }
+}
